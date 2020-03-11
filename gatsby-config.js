@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Partha J Borah`,
+    description: `Digital product designer and developer, Bengaluru, India`,
+    author: `@parthajb`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,16 +15,32 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `partha-jyoti-borah`,
+        short_name: `parthajb`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#101214`,
+        theme_color: `#101214`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `IBM Plex Sans`,
+            variants: [`300i`, `400`, `500`]
+          },
+          {
+            family: `IBM Plex Serif`,
+            variants: [`400`, `500`]
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

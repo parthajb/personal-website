@@ -1,23 +1,23 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const NotFoundPage = () => (
+const Resume = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <SEO title="Resume" />
     <section className="hero">
 	    <div className="container">
 	      <div className="columns align-items-center">
 	        <div className="column is-12">
-	         	<h1>NOT FOUND</h1>
-				<p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+	         	<h1>Resume</h1>
+				<p>Under construction!</p>
 	        </div>
 	      </div>
 	    </div>
     </section>
-    
   </Layout>
 )
 
-export default NotFoundPage
+export default Resume

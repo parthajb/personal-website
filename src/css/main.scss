@@ -1,0 +1,109 @@
+@import '_master.scss';
+
+.background{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	z-index: -1;
+	.columns{
+		.column{
+			padding: 0;
+			height: 100vh;
+			border-left: 1px solid $color-black-600;
+			&:last-child{
+				border-right: 1px solid $color-black-600;
+			}
+		}
+	}
+}
+
+/**************
+* Header
+*************/
+header{
+	width: 100%;
+	.logo{
+		display: inline-block;
+		margin: 20px 0;
+		a{
+			font-family: 'IBM Plex Serif', sans-serif;
+			font-size: 1.125rem;
+			color: $color-white-600;
+			text-decoration: none;
+			font-weight: 500;
+			&:hover, &:focus, &:active{
+				text-decoration: none;
+				color: $color-white-900;
+			}
+		}
+	}
+	.nav{
+		display: inline-block;
+		float: right;
+		margin: 22px 0;
+		a{
+			font-family: 'IBM Plex Serif', sans-serif;
+			font-size: 1rem;
+			color: $color-white-500;
+			text-decoration: none;
+			font-weight: 400;
+			&:hover, &:focus, &:active{
+				text-decoration: none;
+				color: $color-white-900;
+			}
+		}
+	}
+}
+
+/***************
+* Hero
+**************/
+.hero{
+	padding: 6rem 0;
+	h1{
+		font-size: 4rem;
+		color: $color-black-200;
+	}
+	p{
+		font-size: 1.25rem;
+		color: $color-white-900;
+	}
+	.profile-image{
+		margin-right: 15px;
+	}
+}
+
+
+/***************
+* Footer
+**************/
+footer{
+	padding: 10px 0;
+	.copyright{
+		display: inline-block;
+		font-size: .75rem;
+		color: $color-black-300;
+		a{
+			color: currentColor;
+			text-decoration: none;
+			&:hover{
+				color: $color-white-900;
+			}
+		}
+	}
+	.social{
+		display: inline-block;
+		float: right;
+		a{
+			font-size: .75rem;
+			color: $color-black-300;
+			text-decoration: none;
+			padding-left: .5rem;
+			&:hover{
+				color: $color-white-900;
+			}
+		}
+	}
+}

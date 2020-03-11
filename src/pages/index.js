@@ -1,21 +1,48 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql} from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+
+
+  const data = useStaticQuery(graphql`
+    query {
+      portfolio: file(relativePath: { eq: "partha-jyoti-borah.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 512, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
+  return(
+    <Layout>
+      <SEO title="Digital Product Designer & Developer" description="I am a full-stack digital product designer and developer helping brands and businesses to communicate their mission through design."/>
+      <section className="hero">
+        <div className="container">
+          <div className="columns align-items-center">
+            <div className="column is-4 is-med-2">
+              <Img fluid={data.portfolio.childImageSharp.fluid} fadeIn className="profile-image" alt="Partha Jyoti Borah" draggable="false" />
+            </div>
+            <div className="column is-4 is-med-2">
+              <h1>Hello!</h1>
+              <p>I am a full-stack digital product designer 
+              and developer helping brands and businesses to 
+              communicate their mission through design.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      
+    </Layout>
+    )
+}
+
 
 export default IndexPage
