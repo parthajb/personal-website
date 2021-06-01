@@ -31,9 +31,11 @@ const IndexPage = () => {
             </div>
             <div className="column is-4 is-med-2">
               <h1>Hello!</h1>
-              <p>I am a full-stack digital product designer 
-              and developer helping brands and businesses to 
-              communicate their mission through design.</p>
+              <p>I’m a product manager with over 1.5 years of experience in product management and an overall industry experience of 7+ years.</p>
+              <p>My prior experience with product design and development allows me to understand a product from all aspects at different stages of its lifecycle.</p>
+              <p>My key competencies include:</p>
+              <p>Digital Product Management| Product Strategy & Roadmap| Product Documentation| Product Architecture| Scrum| Requirement Analysis| Design Thinking| Wireframing| 
+              UI/UX| Information Architecture| Product Architecture| Technology Architecture| MySQL| User Acceptance Testing| Functional Testing</p>
             </div>
           </div>
         </div>
